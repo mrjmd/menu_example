@@ -1,0 +1,7 @@
+examples.menu_example:
+  path: '/examples/menu_example'
+  defaults:
+    _content: '\Drupal\menu_example\Controller\MenuExampleController::basicInstructions'
+    _title: 'Menu Example'
+  requirements:
+    _permission: 'access content'

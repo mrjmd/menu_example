@@ -1,0 +1,4 @@
+examples.menu_example:
+  title: Menu Example
+  description: 'Simplest possible menu type, and the parent menu entry for others'
+  route_name: examples.menu_example

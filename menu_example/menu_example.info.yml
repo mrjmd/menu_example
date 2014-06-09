@@ -1,0 +1,6 @@
+name: Menu Example
+type: module
+description: 'An example of advanced uses of the menu APIs.'
+package: Example modules
+version: VERSION
+core: 8.x
