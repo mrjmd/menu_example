@@ -50,6 +50,7 @@ examples.menu_example.tabs:
 examples.menu_example.use_url_arguments:
   title: Extra Arguments
   description: 'The page callback can use the arguments provided after the path used as key'
+  parent: examples.menu_example
   weight: 40
   route_name: examples.menu_example.use_url_arguments
 
