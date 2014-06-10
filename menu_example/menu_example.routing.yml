@@ -9,7 +9,7 @@ examples.menu_example:
 examples.menu_example.alternate_menu:
   path: '/examples/menu_example_alternate_menu'
   defaults:
-    _content: '\Drupal\menu_example\Controller\MenuExampleController::menuPage'
+    _content: '\Drupal\menu_example\Controller\MenuExampleController::alternateMenu'
     _title: 'Menu Example: Menu in alternate menu'
   requirements:
     _access: 'TRUE'
@@ -17,7 +17,7 @@ examples.menu_example.alternate_menu:
 examples.menu_example.permissioned:
   path: '/examples/menu_example/permissioned'
   defaults:
-    _content: '\Drupal\menu_example\Controller\MenuExampleController::menuPage'
+    _content: '\Drupal\menu_example\Controller\MenuExampleController::permissioned'
     _title: 'Permissioned Example'
   requirements:
     _access: 'TRUE'
@@ -25,7 +25,7 @@ examples.menu_example.permissioned:
 examples.menu_example.permissioned_controlled:
   path: '/examples/menu_example/permissioned/controlled'
   defaults:
-    _content: '\Drupal\menu_example\Controller\MenuExampleController::menuPage'
+    _content: '\Drupal\menu_example\Controller\MenuExampleController::permissionedControlled'
     _title: 'Permissioned Menu Item'
   requirements:
     _access: 'TRUE'
@@ -34,21 +34,21 @@ examples.menu_example.permissioned_controlled:
 examples.menu_example.custom_access:
   path: '/examples/menu_example/custom_access'
   defaults:
-    _content: '\Drupal\menu_example\Controller\MenuExampleController::menuPage'
+    _content: '\Drupal\menu_example\Controller\MenuExampleController::customAccess'
   requirements:
     _permission: 'access content'
     
 examples.menu_example.custom_access_page:
   path: '/examples/menu_example/custom_access/page'
   defaults:
-    _content: '\Drupal\menu_example\Controller\MenuExampleController::menuPage'
+    _content: '\Drupal\menu_example\Controller\MenuExampleController::customAccessPage'
   requirements:
     _user_is_logged_in: 'TRUE'
 
 examples.menu_example.route_only:
   path: '/examples/menu_example/route_only'
   defaults:
-    _content: '\Drupal\menu_example\Controller\MenuExampleController::menuPage'
+    _content: '\Drupal\menu_example\Controller\MenuExampleController::routeOnly'
     _title: 'Route only example'
   requirements:
     _access: 'TRUE'
@@ -56,7 +56,7 @@ examples.menu_example.route_only:
 examples.menu_example.route_only.route:
   path: '/examples/menu_example/route_only/route'
   defaults:
-    _content: '\Drupal\menu_example\Controller\MenuExampleController::menuPage'
+    _content: '\Drupal\menu_example\Controller\MenuExampleController::routeOnlyRoute'
     _title: 'Route only'
   requirements:
     _access: 'TRUE'
