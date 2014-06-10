@@ -1,4 +1,60 @@
 examples.menu_example:
   title: Menu Example
   description: 'Simplest possible menu type, and the parent menu entry for others'
+  expanded: 'TRUE'
   route_name: examples.menu_example
+
+examples.menu_example.alternate_menu:
+  title: Menu Example: Menu in alternate menu
+  menu_name: 'main'
+  route_name: examples.menu_example.alternate_menu
+
+examples.menu_example.permissioned:
+  title: Permissioned Example
+  parent: examples.menu_example
+  route_name: examples.menu_example.permissioned
+  weight: 10
+
+examples.menu_example.permissioned_controlled:
+  title: Permissioned Menu Item
+  parent: examples.menu_example.permissioned
+  route_name: examples.menu_example.permissioned_controlled
+  weight: 10
+
+examples.menu_example.custom_access:
+  title: Custom Access Example
+  parent: examples.menu_example
+  expanded: 'TRUE'
+  weight: -5
+  route_name: examples.menu_example.custom_access
+
+examples.menu_example.custom_access_page:
+  title: Custom Access Menu Page
+  parent: examples.menu_example.custom_access
+  expanded: 'TRUE'
+  route_name: examples.menu_example.custom_access_page
+
+examples.menu_example.route_only:
+  title: Route only example
+  parent: examples.menu_example
+  weight: 20
+  route_name: examples.menu_example.route_only
+
+examples.menu_example.tabs:
+  title: Tabs
+  description: 'Shows how to create primary and secondary tabs'
+  parent: examples.menu_example
+  weight: 30
+  route_name: examples.menu_example.tabs
+
+examples.menu_example.use_url_arguments:
+  title: Extra Arguments
+  description: 'The page callback can use the arguments provided after the path used as key'
+  weight: 40
+  route_name: examples.menu_example.use_url_arguments
+
+examples.menu_example.title_callbacks:
+  title: Dynamic title
+  descrtiption: 'The title of this menu item is dynamically generated'
+  weight: 50
+  route_name: examples.menu_example.title_callbacks

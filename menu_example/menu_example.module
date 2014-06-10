@@ -1,0 +1,14 @@
+<?php
+
+/**
+ * Implements hook_permission().
+ *
+ * Provides a demonstration access string.
+ */
+function menu_example_permission() {
+  return array(
+    'access protected menu example' => array(
+      'title' => t('Access the protected menu example'),
+    ),
+  );
+}
