@@ -4,9 +4,10 @@ examples.menu_example:
     _content: '\Drupal\menu_example\Controller\MenuExampleController::basicInstructions'
     _title: 'Menu Example'
     content: 'This page is displayed by the simplest (and base) menu example. Note that the title of the page is the same as the link title. You can also <a href="!link">visit a similar page with no menu link</a>. Also, note that there is a hook_menu_alter() example that has changed the path of one of the menu items.'
+    link: 'examples/menu_example/path_only'
   requirements:
     _permission: 'access content'
-    
+
 examples.menu_example.alternate_menu:
   path: '/examples/menu_example_alternate_menu'
   defaults:
@@ -39,7 +40,7 @@ examples.menu_example.custom_access:
     _title: 'Custom Access Example'
   requirements:
     _permission: 'access content'
-    
+
 examples.menu_example.custom_access_page:
   path: '/examples/menu_example/custom_access/page'
   defaults:
@@ -128,3 +129,39 @@ examples.menu_example.title_callbacks:
   defaults:
     _content: '\Drupal\menu_example\Controller\MenuExampleController::menuPage'
     _title_callback: 'Drupal\menu_example\Controller\MenuExampleController::customTitle'
+    title: 'Dynamic Title: username='
+  requirements:
+    _access: 'TRUE'
+
+examples.menu_example.placeholder_arguments:
+  path: '/examples/menu_example/placeholder_argument'
+  defaults:
+    _content: '\Drupal\menu_example\Controller\MenuExampleController::placeholderArgs'
+    _title: 'Placeholder Arguments'
+  requirements:
+    _access: 'TRUE'
+
+examples.menu_example.placeholder_arguments.display:
+  path: '/examples/menu_example/placeholder_argument/{arg}/display'
+  defaults:
+    _content: '\Drupal\menu_example\Controller\MenuExampleController::placeholderArgsDisplay'
+    _title: 'Placeholder Arguments'
+  requirements:
+    _access: 'TRUE'
+
+examples.menu_example.upcast_parameter:
+  path: '/examples/menu_example/default_arg/{upcast}'
+  defaults:
+    _content: '\Drupal\menu_example\Controller\MenuExampleController::upcastExample'
+    _title: 'Upcast Path Paramater'
+    upcast: ''
+  requirements:
+    _access: 'TRUE'
+
+examples.menu_example.path_override:
+  path: '/examples/menu_example/menu_original_path'
+  defaults:
+    _content: '\Drupal\menu_example\Controller\MenuExampleController::pathOverride'
+    _title: 'Menu path that will be altered'
+  requirements:
+    _access: 'TRUE'

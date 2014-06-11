@@ -3,9 +3,13 @@
 namespace Drupal\menu_example\Controller;
 
 class MenuExampleController {
-  public function basicInstructions($content = '') {
+  public function basicInstructions($content = '', $link = '') {
+    $markup = '<div>'. t('This is the base page of the Menu Example. There are a number of examples here, from the most basic (like this one) to extravagant mappings of loaded placeholder arguments. Enjoy!') .'</div>';
+    if ($content && $link) {
+      $markup .= '<br /><div>'. t($content, array('!link' => url($link))) .'</div>';
+    }
     return array(
-      '#markup' => $content ? $content : t('This is the base page of the Menu Example. There are a number of examples here, from the most basic (like this one) to extravagant mappings of loaded placeholder arguments. Enjoy! This page is displayed by the simplest (and base) menu example. Note that the title of the page is the same as the link title. You can also <a href="!link">visit a similar page with no menu link</a>. Also, note that there is a hook_menu_alter() example that has changed the path of one of the menu items.', array('!link' => url('examples/menu_example/route_only'))),
+      '#markup' => $markup,
     );
   }
   
@@ -70,7 +74,33 @@ class MenuExampleController {
     );
   }
   
-  public function customTitle(Request $request) {
-    return $request;
+  public function placeholderArgs() {
+    return array(
+      '#markup' => t('Demonstrate placeholders by visiting <a href="!link">examples/menu_example/placeholder_argument/3343/display</a>', array('!link' => url('examples/menu_example/placeholder_argument/3343/display'))),
+    );
+  }
+  
+  public function placeholderArgsDisplay($arg = '') {
+    return array(
+      '#markup' => $arg,
+    );
+  }
+  
+  public function upcastExample($upcast = NULL) {
+    return array(
+      '#markup' => t('Placeholder for now'),
+    );
+  }
+  
+  public function pathOverride() {
+    return array(
+      '#markup' => t('Placeholder for now'),
+    );
+  }
+  
+  public function customTitle($title = '') {
+    global $user;
+    $title .= $user->name;
+    return $title;
   }
 }

@@ -1,7 +1,7 @@
 examples.menu_example:
   title: Menu Example
   description: 'Simplest possible menu type, and the parent menu entry for others'
-  expanded: 'TRUE'
+  expanded: 1
   route_name: examples.menu_example
 
 examples.menu_example.alternate_menu:
@@ -57,5 +57,25 @@ examples.menu_example.use_url_arguments:
 examples.menu_example.title_callbacks:
   title: Dynamic title
   descrtiption: 'The title of this menu item is dynamically generated'
+  parent: examples.menu_example
   weight: 50
   route_name: examples.menu_example.title_callbacks
+
+examples.menu_example.placeholder_arguments:
+  title: Placeholder Arguments
+  description: ''
+  parent: examples.menu_example
+  weight: 60
+  route_name: examples.menu_example.placeholder_arguments
+
+examples.menu_example.upcast_parameter:
+  title: Upcast Path Paramater
+  parent: examples.menu_example
+  weight: 70
+  route_name: examples.menu_example.upcast_parameter
+
+examples.menu_example.path_override:
+  title: Menu path that will be altered
+  parent: examples.menu_example
+  weight: 80
+  route_name: examples.menu_example.path_override
