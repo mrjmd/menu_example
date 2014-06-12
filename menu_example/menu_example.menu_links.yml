@@ -12,6 +12,7 @@ examples.menu_example.alternate_menu:
 examples.menu_example.permissioned:
   title: Permissioned Example
   parent: examples.menu_example
+  expanded: 1
   route_name: examples.menu_example.permissioned
   weight: 10
 
@@ -24,58 +25,57 @@ examples.menu_example.permissioned_controlled:
 examples.menu_example.custom_access:
   title: Custom Access Example
   parent: examples.menu_example
-  expanded: 'TRUE'
-  weight: -5
+  expanded: 1
   route_name: examples.menu_example.custom_access
+  weight: -5
 
 examples.menu_example.custom_access_page:
   title: Custom Access Menu Page
   parent: examples.menu_example.custom_access
-  expanded: 'TRUE'
   route_name: examples.menu_example.custom_access_page
 
 examples.menu_example.route_only:
   title: Route only example
   parent: examples.menu_example
-  weight: 20
   route_name: examples.menu_example.route_only
+  weight: 20
 
 examples.menu_example.tabs:
   title: Tabs
   description: 'Shows how to create primary and secondary tabs'
   parent: examples.menu_example
-  weight: 30
   route_name: examples.menu_example.tabs
+  weight: 30
 
 examples.menu_example.use_url_arguments:
   title: Extra Arguments
   description: 'The page callback can use the arguments provided after the path used as key'
   parent: examples.menu_example
-  weight: 40
   route_name: examples.menu_example.use_url_arguments
+  weight: 40
 
 examples.menu_example.title_callbacks:
   title: Dynamic title
-  descrtiption: 'The title of this menu item is dynamically generated'
+  description: 'The title of this menu item is dynamically generated'
   parent: examples.menu_example
-  weight: 50
   route_name: examples.menu_example.title_callbacks
+  weight: 50
 
 examples.menu_example.placeholder_arguments:
   title: Placeholder Arguments
   description: ''
   parent: examples.menu_example
-  weight: 60
   route_name: examples.menu_example.placeholder_arguments
+  weight: 60
 
 examples.menu_example.upcast_parameter:
   title: Upcast Path Paramater
   parent: examples.menu_example
-  weight: 70
   route_name: examples.menu_example.upcast_parameter
+  weight: 70
 
 examples.menu_example.path_override:
   title: Menu path that will be altered
   parent: examples.menu_example
-  weight: 80
   route_name: examples.menu_example.path_override
+  weight: 80

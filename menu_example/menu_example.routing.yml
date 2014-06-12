@@ -30,7 +30,6 @@ examples.menu_example.permissioned_controlled:
     _content: '\Drupal\menu_example\Controller\MenuExampleController::permissionedControlled'
     _title: 'Permissioned Menu Item'
   requirements:
-    _access: 'TRUE'
     _permission: 'access protected menu example'
 
 examples.menu_example.custom_access:
@@ -47,7 +46,7 @@ examples.menu_example.custom_access_page:
     _content: '\Drupal\menu_example\Controller\MenuExampleController::customAccessPage'
     _title: 'Custom Access Menu Item'
   requirements:
-    _user_is_logged_in: 'TRUE'
+    _menu_example_role: 'authenticated'
 
 examples.menu_example.route_only:
   path: '/examples/menu_example/route_only'
@@ -127,7 +126,7 @@ examples.menu_example.use_url_arguments:
 examples.menu_example.title_callbacks:
   path: '/examples/menu_example/title_callbacks'
   defaults:
-    _content: '\Drupal\menu_example\Controller\MenuExampleController::menuPage'
+    _content: '\Drupal\menu_example\Controller\MenuExampleController::titleCallbacks'
     _title_callback: 'Drupal\menu_example\Controller\MenuExampleController::customTitle'
     title: 'Dynamic Title: username='
   requirements:

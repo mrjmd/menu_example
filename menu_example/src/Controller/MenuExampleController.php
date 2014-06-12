@@ -33,13 +33,13 @@ class MenuExampleController {
   
   public function customAccess() {
     return array(
-      '#markup' => t('A menu item that requires the user to posess a role of "authenticated user" is at <a href="!link">examples/menu_example/custom_access/page</a>', array('!link' => url('examples/menu_example/custom_access/page'))),
+      '#markup' => t('A menu item that requires the user to posess a role of "authenticated" is at <a href="!link">examples/menu_example/custom_access/page</a>', array('!link' => url('examples/menu_example/custom_access/page'))),
     );
   }
   
   public function customAccessPage() {
     return array(
-      '#markup' => t('This menu entry will not be visible and access will result in a 403 error unless the user has the "authenticated user" role. This is accomplished with a custom access callback.'),
+      '#markup' => t('This menu entry will not be visible and access will result in a 403 error unless the user has the "authenticated" role. This is accomplished with a custom access callback.'),
     );
   }
   
@@ -67,19 +67,25 @@ class MenuExampleController {
       '#markup' => $markup,
     );
   }
-  
+
+  public function titleCallbacks() {
+    return array(
+      '#markup' => t('The page title is dynamically changed by the title callback'),
+    );
+  }
+
   public function menuPage($test = '') {
     return array(
       '#markup' => $test ? $test : t('A menu item that requires the user to posess a role of "authenticated user" is at <a href="!link">examples/menu_example/custom_access/page</a>', array('!link' => url('examples/menu_example/custom_access/page'))),
     );
   }
-  
+
   public function placeholderArgs() {
     return array(
       '#markup' => t('Demonstrate placeholders by visiting <a href="!link">examples/menu_example/placeholder_argument/3343/display</a>', array('!link' => url('examples/menu_example/placeholder_argument/3343/display'))),
     );
   }
-  
+
   public function placeholderArgsDisplay($arg = '') {
     return array(
       '#markup' => $arg,

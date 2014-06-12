@@ -1,0 +1,9 @@
+services:
+  access_check.menu_example.role:
+    class: Drupal\menu_example\Access\RoleAccessCheck
+    tags:
+      - { name: access_check, applies_to: _menu_example_role }
+  menu_example.route_subscriber:
+    class: Drupal\menu_example\Routing\RouteSubscriber
+    tags:
+      - { name: event_subscriber }
