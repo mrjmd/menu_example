@@ -1,13 +1,16 @@
 <?php
+
 /**
 * @file
 * Contains \Drupal\menu_example\Routing\RouteSubscriber.
 * See: https://drupal.org/node/2187643
 */
 namespace Drupal\menu_example\Routing;
+
 use Drupal\Core\Routing\RouteSubscriberBase;
 use Drupal\Core\Routing\RoutingEvents;
 use Symfony\Component\Routing\RouteCollection;
+
 /**
 * Listens to the dynamic route events.
 */

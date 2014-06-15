@@ -2,7 +2,7 @@ examples.menu_example.tabs:
   route_name: examples.menu_example.tabs
   title: Default primary tab
   base_route: examples.menu_example.tabs
-  
+
 examples.menu_example.tabs_second:
   route_name: examples.menu_example.tabs_second
   title: Second

@@ -1,4 +1,5 @@
 <?php
+
 /**
 * @file
 * Contains \Drupal\menu_example\Routing\MenuExampleRoutes.
@@ -18,7 +19,7 @@ class MenuExampleRoutes {
    */
   public function routes() {
     $routes = array();
-    
+
     $tabs = array(
       'tabs' => t('Default primary tab'),
       'tabs/second' => t('Second'),
@@ -27,7 +28,7 @@ class MenuExampleRoutes {
       'tabs/default/second' => t('Second'),
       'tabs/default/third' => t('Third'),
     );
-    
+
     foreach ($tabs AS $path => $title) {
       $machine_name = 'examples.menu_example.'. str_replace('/', '_', $path);
       $routes[$machine_name] = new Route(
@@ -43,7 +44,7 @@ class MenuExampleRoutes {
         )
       );
     }
-    
+
     return $routes;
   }
 }

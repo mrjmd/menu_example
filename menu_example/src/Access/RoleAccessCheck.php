@@ -4,7 +4,6 @@
  * @file
  * Contains \Drupal\menu_example\Access\RoleAccessCheck.
  */
-
 namespace Drupal\menu_example\Access;
 
 use Drupal\Core\Routing\Access\AccessInterface;
