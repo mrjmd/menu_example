@@ -3,8 +3,8 @@ examples.menu_example:
   defaults:
     _content: '\Drupal\menu_example\Controller\MenuExampleController::basicInstructions'
     _title: 'Menu Example'
-    content: 'This page is displayed by the simplest (and base) menu example. Note that the title of the page is the same as the link title. You can also <a href="!link">visit a similar page with no menu link</a>. Also, note that there is a hook_menu_alter() example that has changed the path of one of the menu items.'
-    link: 'examples/menu_example/path_only'
+    content: 'This page is displayed by the base menu example. Note that the title of the page is the same as the link title. You can also <a href="!link">visit a similar page with no menu link</a>. Also, note that there is a route subscriber example that has changed the path of one of the menu routes.'
+    link: 'examples/menu_example/route_only'
   requirements:
     _permission: 'access content'
 
@@ -64,54 +64,8 @@ examples.menu_example.route_only.route:
   requirements:
     _access: 'TRUE'
 
-examples.menu_example.tabs:
-  path: '/examples/menu_example/tabs/{test}'
-  defaults:
-    _content: '\Drupal\menu_example\Controller\MenuExampleController::menuPage'
-    _title: 'Tabs'
-    test: <b>wut wut?</b>
-  requirements:
-    _access: 'TRUE'
-
-examples.menu_example.tabs_second:
-  path: '/examples/menu_example/tabs/second'
-  defaults:
-    _content: '\Drupal\menu_example\Controller\MenuExampleController::menuPage'
-    _title: 'Second'
-  requirements:
-    _access: 'TRUE'
-
-examples.menu_example.tabs_third:
-  path: '/examples/menu_example/tabs/third'
-  defaults:
-    _content: '\Drupal\menu_example\Controller\MenuExampleController::menuPage'
-    _title: 'Third'
-  requirements:
-    _access: 'TRUE'
-
-examples.menu_example.tabs_fourth:
-  path: '/examples/menu_example/tabs/fourth'
-  defaults:
-    _content: '\Drupal\menu_example\Controller\MenuExampleController::menuPage'
-    _title: 'Fourth'
-  requirements:
-    _access: 'TRUE'
-
-examples.menu_example.tabs.secondary_second:
-  path: '/examples/menu_example/tabs/first/second'
-  defaults:
-    _content: '\Drupal\menu_example\Controller\MenuExampleController::menuPage'
-    _title: 'Second'
-  requirements:
-    _access: 'TRUE'
-
-examples.menu_example.tabs.secondary_third:
-  path: '/examples/menu_example/tabs/first/third'
-  defaults:
-    _content: '\Drupal\menu_example\Controller\MenuExampleController::menuPage'
-    _title: 'Third'
-  requirements:
-    _access: 'TRUE'
+route_callbacks:
+  - '\Drupal\menu_example\Routing\MenuExampleRoutes::routes'
 
 examples.menu_example.use_url_arguments:
   path: '/examples/menu_example/use_url_arguments/{arg1}/{arg2}'

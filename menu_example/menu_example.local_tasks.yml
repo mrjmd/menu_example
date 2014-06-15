@@ -23,15 +23,15 @@ examples.menu_example.tabs_fourth:
 
 examples.menu_example.tabs.secondary:
   route_name: examples.menu_example.tabs
-  title: First
+  title: Default secondary tab
   parent_id: examples.menu_example.tabs
 
-examples.menu_example.tabs.secondary_second:
-  route_name: examples.menu_example.tabs.secondary_second
+examples.menu_example.tabs_default_second:
+  route_name: examples.menu_example.tabs_default_second
   title: Second
   parent_id: examples.menu_example.tabs
 
-examples.menu_example.tabs.secondary_third:
-  route_name: examples.menu_example.tabs.secondary_third
+examples.menu_example.tabs_default_third:
+  route_name: examples.menu_example.tabs_default_third
   title: Third
   parent_id: examples.menu_example.tabs

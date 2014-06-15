@@ -30,7 +30,7 @@ examples.menu_example.custom_access:
   weight: -5
 
 examples.menu_example.custom_access_page:
-  title: Custom Access Menu Page
+  title: Custom Access Menu Item
   parent: examples.menu_example.custom_access
   route_name: examples.menu_example.custom_access_page
 

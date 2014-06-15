@@ -7,3 +7,7 @@ services:
     class: Drupal\menu_example\Routing\RouteSubscriber
     tags:
       - { name: event_subscriber }
+  paramconverter.menu_example:
+    class: Drupal\menu_example\ParamConverter\MenuExampleConverter
+    tags:
+      - { name: paramconverter }
