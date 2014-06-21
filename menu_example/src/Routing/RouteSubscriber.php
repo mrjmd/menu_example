@@ -22,5 +22,6 @@ class RouteSubscriber extends RouteSubscriberBase {
     // Change path.
     $route = $collection->get('examples.menu_example.path_override');
     $route->setPath('/examples/menu_example/menu_altered_path');
+    $route->setDefault('_title', 'Menu item altered by RouteSubscriber::alterRoutes');
   }
 }

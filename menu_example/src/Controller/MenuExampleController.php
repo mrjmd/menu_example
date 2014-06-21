@@ -70,7 +70,7 @@ class MenuExampleController {
 
   public function titleCallbacks() {
     return array(
-      '#markup' => t('The page title is dynamically changed by the title callback'),
+      '#markup' => t('The title of this page is dynamically changed by the title callback for this route. Also, the title of the menu link is dynamically changed by implementing hook_menu_link_presave() and hook_translated_menu_link_alter().'),
     );
   }
 
@@ -95,7 +95,7 @@ class MenuExampleController {
 
   public function upcastExample($upcast) {
     return array(
-      '#markup' => t('Placeholder for now: '. $upcast),
+      '#markup' => t('This is a placeholder for now, because it is not  working: '. $upcast),
     );
   }
 
